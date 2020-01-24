@@ -46,6 +46,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Corewar.dir/libft/src/printing.c.o"
   "CMakeFiles/Corewar.dir/src/asm/asm.c.o"
   "CMakeFiles/Corewar.dir/src/asm/assembler.c.o"
+  "CMakeFiles/Corewar.dir/src/asm/crypting.c.o"
   "CMakeFiles/Corewar.dir/src/asm/ft_error_asm.c.o"
   "CMakeFiles/Corewar.dir/src/asm/get_name_comment.c.o"
   "CMakeFiles/Corewar.dir/src/asm/helper.c.o"

@@ -176,16 +176,25 @@ CMakeFiles/Corewar.dir/libft/src/printing.c.o: ../libft/includes/libft.h
 CMakeFiles/Corewar.dir/libft/src/printing.c.o: ../libft/src/printing.c
 
 CMakeFiles/Corewar.dir/src/asm/asm.c.o: ../includes/asm.h
+CMakeFiles/Corewar.dir/src/asm/asm.c.o: ../includes/op.h
 CMakeFiles/Corewar.dir/src/asm/asm.c.o: ../libft/includes/ft_printf.h
 CMakeFiles/Corewar.dir/src/asm/asm.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/Corewar.dir/src/asm/asm.c.o: ../libft/includes/libft.h
 CMakeFiles/Corewar.dir/src/asm/asm.c.o: ../src/asm/asm.c
 
 CMakeFiles/Corewar.dir/src/asm/assembler.c.o: ../includes/asm.h
+CMakeFiles/Corewar.dir/src/asm/assembler.c.o: ../includes/op.h
 CMakeFiles/Corewar.dir/src/asm/assembler.c.o: ../libft/includes/ft_printf.h
 CMakeFiles/Corewar.dir/src/asm/assembler.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/Corewar.dir/src/asm/assembler.c.o: ../libft/includes/libft.h
 CMakeFiles/Corewar.dir/src/asm/assembler.c.o: ../src/asm/assembler.c
+
+CMakeFiles/Corewar.dir/src/asm/crypting.c.o: ../includes/asm.h
+CMakeFiles/Corewar.dir/src/asm/crypting.c.o: ../includes/op.h
+CMakeFiles/Corewar.dir/src/asm/crypting.c.o: ../libft/includes/ft_printf.h
+CMakeFiles/Corewar.dir/src/asm/crypting.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/Corewar.dir/src/asm/crypting.c.o: ../libft/includes/libft.h
+CMakeFiles/Corewar.dir/src/asm/crypting.c.o: ../src/asm/crypting.c
 
 CMakeFiles/Corewar.dir/src/asm/ft_error_asm.c.o: ../includes/asm.h
 CMakeFiles/Corewar.dir/src/asm/ft_error_asm.c.o: ../includes/op.h
@@ -209,6 +218,7 @@ CMakeFiles/Corewar.dir/src/asm/helper.c.o: ../libft/includes/libft.h
 CMakeFiles/Corewar.dir/src/asm/helper.c.o: ../src/asm/helper.c
 
 CMakeFiles/Corewar.dir/src/asm/initialization.c.o: ../includes/asm.h
+CMakeFiles/Corewar.dir/src/asm/initialization.c.o: ../includes/op.h
 CMakeFiles/Corewar.dir/src/asm/initialization.c.o: ../libft/includes/ft_printf.h
 CMakeFiles/Corewar.dir/src/asm/initialization.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/Corewar.dir/src/asm/initialization.c.o: ../libft/includes/libft.h

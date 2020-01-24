@@ -1392,6 +1392,33 @@ src/asm/assembler.c.s:
 	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/assembler.c.s
 .PHONY : src/asm/assembler.c.s
 
+src/asm/crypting.o: src/asm/crypting.c.o
+
+.PHONY : src/asm/crypting.o
+
+# target to build an object file
+src/asm/crypting.c.o:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/crypting.c.o
+.PHONY : src/asm/crypting.c.o
+
+src/asm/crypting.i: src/asm/crypting.c.i
+
+.PHONY : src/asm/crypting.i
+
+# target to preprocess a source file
+src/asm/crypting.c.i:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/crypting.c.i
+.PHONY : src/asm/crypting.c.i
+
+src/asm/crypting.s: src/asm/crypting.c.s
+
+.PHONY : src/asm/crypting.s
+
+# target to generate assembly for a file
+src/asm/crypting.c.s:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/crypting.c.s
+.PHONY : src/asm/crypting.c.s
+
 src/asm/ft_error_asm.o: src/asm/ft_error_asm.c.o
 
 .PHONY : src/asm/ft_error_asm.o
@@ -1704,6 +1731,9 @@ help:
 	@echo "... src/asm/assembler.o"
 	@echo "... src/asm/assembler.i"
 	@echo "... src/asm/assembler.s"
+	@echo "... src/asm/crypting.o"
+	@echo "... src/asm/crypting.i"
+	@echo "... src/asm/crypting.s"
 	@echo "... src/asm/ft_error_asm.o"
 	@echo "... src/asm/ft_error_asm.i"
 	@echo "... src/asm/ft_error_asm.s"

@@ -177,16 +177,25 @@ CMakeFiles/Corewar.dir/libft/src/printing.c.o
  /Users/fgeruss/Desktop/Corewar/libft/src/printing.c
 CMakeFiles/Corewar.dir/src/asm/asm.c.o
  ../includes/asm.h
+ ../includes/op.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
  /Users/fgeruss/Desktop/Corewar/src/asm/asm.c
 CMakeFiles/Corewar.dir/src/asm/assembler.c.o
  ../includes/asm.h
+ ../includes/op.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
  /Users/fgeruss/Desktop/Corewar/src/asm/assembler.c
+CMakeFiles/Corewar.dir/src/asm/crypting.c.o
+ ../includes/asm.h
+ ../includes/op.h
+ ../libft/includes/ft_printf.h
+ ../libft/includes/get_next_line.h
+ ../libft/includes/libft.h
+ /Users/fgeruss/Desktop/Corewar/src/asm/crypting.c
 CMakeFiles/Corewar.dir/src/asm/ft_error_asm.c.o
  ../includes/asm.h
  ../includes/op.h
@@ -210,6 +219,7 @@ CMakeFiles/Corewar.dir/src/asm/helper.c.o
  /Users/fgeruss/Desktop/Corewar/src/asm/helper.c
 CMakeFiles/Corewar.dir/src/asm/initialization.c.o
  ../includes/asm.h
+ ../includes/op.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h

@@ -54,6 +54,24 @@ static	char 	*types[] =
 	"END"
 };
 
+typedef struct		s_link
+{
+	int 			row;
+	int 			column;
+	int 			start;
+	int 			point;
+	size_t 			size;
+	struct s_link	*next;
+}					t_link;
+
+typedef struct		s_mark
+{
+	char			*name;
+	int				count;
+	t_link			*link;
+	struct s_mark	*next;
+}					t_mark;
+
 typedef struct		s_cont
 {
 	int 			row;
@@ -68,9 +86,11 @@ typedef struct		s_asm
 	int 			fd;
 	int 			row;
 	int 			column;
+	int 			point;
 	char 			*name;
 	char 			*comment;
 	t_cont			*content;
+	t_mark			*marker;
 }					t_asm;
 
 typedef struct	s_op
@@ -215,6 +235,7 @@ static t_op		g_op[16] = {{.name = "live", .code = 0x01,
 }
 };
 
+
 void				assembler(char *file_name);
 t_asm				*initialization(int fd);
 void				validation(t_asm *assem);
@@ -230,5 +251,6 @@ void				add_content(t_asm **assem, t_cont *content);
 int					is_help(char c);
 void				get_name_comment(t_asm *assem);
 void				ft_error_asm(t_cont *content);
+void				crypting(t_asm *assem);
 
 #endif

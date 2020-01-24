@@ -21,6 +21,8 @@ t_asm	*initialization(int fd)
 	assem->fd = fd;
 	assem->column = 0;
 	assem->row = 0;
+	assem->point = 0;
+	assem->marker= NULL;
 	assem->comment = NULL;
 	assem->name = NULL;
 	assem->content = NULL;

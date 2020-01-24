@@ -40,6 +40,6 @@ void	assembler(char *file_name)
 	assem = initialization(fd);
 	validation(assem);
 	get_name_comment(assem);
-	()
+	crypting(assem);
 	freeer(assem);
 }

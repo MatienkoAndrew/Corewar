@@ -7,14 +7,10 @@
 #IncludeRegexTransform: 
 
 ../includes/asm.h
-string.h
--
 ft_printf.h
 ../includes/ft_printf.h
-inttypes.h
--
-stdlib.h
--
+op.h
+../includes/op.h
 
 ../includes/op.h
 
@@ -40,43 +36,7 @@ stdlib.h
 unistd.h
 -
 
-/Users/fgeruss/Desktop/Corewar/src/asm/asm.c
-asm.h
-/Users/fgeruss/Desktop/Corewar/src/asm/asm.h
-
-/Users/fgeruss/Desktop/Corewar/src/asm/assembler.c
-asm.h
-/Users/fgeruss/Desktop/Corewar/src/asm/asm.h
-
-/Users/fgeruss/Desktop/Corewar/src/asm/ft_error_asm.c
-asm.h
-/Users/fgeruss/Desktop/Corewar/src/asm/asm.h
-op.h
-/Users/fgeruss/Desktop/Corewar/src/asm/op.h
-
-/Users/fgeruss/Desktop/Corewar/src/asm/get_name_comment.c
-asm.h
-/Users/fgeruss/Desktop/Corewar/src/asm/asm.h
-op.h
-/Users/fgeruss/Desktop/Corewar/src/asm/op.h
-
-/Users/fgeruss/Desktop/Corewar/src/asm/helper.c
-asm.h
-/Users/fgeruss/Desktop/Corewar/src/asm/asm.h
-op.h
-/Users/fgeruss/Desktop/Corewar/src/asm/op.h
-
-/Users/fgeruss/Desktop/Corewar/src/asm/initialization.c
-asm.h
-/Users/fgeruss/Desktop/Corewar/src/asm/asm.h
-
-/Users/fgeruss/Desktop/Corewar/src/asm/parsing.c
-asm.h
-/Users/fgeruss/Desktop/Corewar/src/asm/asm.h
-op.h
-/Users/fgeruss/Desktop/Corewar/src/asm/op.h
-
-/Users/fgeruss/Desktop/Corewar/src/asm/validation.c
+/Users/fgeruss/Desktop/Corewar/src/asm/crypting.c
 asm.h
 /Users/fgeruss/Desktop/Corewar/src/asm/asm.h
 op.h

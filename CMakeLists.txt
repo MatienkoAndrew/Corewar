@@ -68,4 +68,5 @@ add_executable(Corewar
     src/asm/parsing.c
         src/asm/helper.c
         src/asm/get_name_comment.c
-        src/asm/ft_error_asm.c)
+        src/asm/ft_error_asm.c
+        src/asm/crypting.c)

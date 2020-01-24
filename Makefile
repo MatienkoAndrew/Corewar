@@ -44,7 +44,7 @@ ASM_SOURCES_LIST = asm.c \
 				   parsing.c \
 				   helper.c \
 				   get_name_comment.c \
-				   ft_error_asm.c
+				   ft_error_asm.c crypting.c
 ASM_SOURCES = $(addprefix $(ASM_SOURCES_DIRECTORY), $(ASM_SOURCES_LIST))
 
 # Objects
