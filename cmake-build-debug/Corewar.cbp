@@ -137,6 +137,9 @@
 		<Unit filename="/Users/fgeruss/Desktop/Corewar/libft/src/ft_itoa.c">
 			<Option target="Corewar"/>
 		</Unit>
+		<Unit filename="/Users/fgeruss/Desktop/Corewar/libft/src/ft_memcpy.c">
+			<Option target="Corewar"/>
+		</Unit>
 		<Unit filename="/Users/fgeruss/Desktop/Corewar/libft/src/ft_memdel.c">
 			<Option target="Corewar"/>
 		</Unit>
@@ -248,6 +251,15 @@
 		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/assembler.c">
 			<Option target="Corewar"/>
 		</Unit>
+		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/crypt_label.c">
+			<Option target="Corewar"/>
+		</Unit>
+		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/crypt_links.c">
+			<Option target="Corewar"/>
+		</Unit>
+		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/crypt_operator.c">
+			<Option target="Corewar"/>
+		</Unit>
 		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/crypting.c">
 			<Option target="Corewar"/>
 		</Unit>
@@ -260,13 +272,25 @@
 		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/helper.c">
 			<Option target="Corewar"/>
 		</Unit>
+		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/helper_1.c">
+			<Option target="Corewar"/>
+		</Unit>
 		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/initialization.c">
+			<Option target="Corewar"/>
+		</Unit>
+		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/link.c">
+			<Option target="Corewar"/>
+		</Unit>
+		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/new_filename.c">
 			<Option target="Corewar"/>
 		</Unit>
 		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/parsing.c">
 			<Option target="Corewar"/>
 		</Unit>
 		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/validation.c">
+			<Option target="Corewar"/>
+		</Unit>
+		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/write_bytecode.c">
 			<Option target="Corewar"/>
 		</Unit>
 		<Unit filename="/Users/fgeruss/Desktop/Corewar/CMakeLists.txt">

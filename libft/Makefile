@@ -62,7 +62,7 @@ C_FILE = ft_atoi.c \
 		 ft_strnew_float.c \
 		 ft_strsub.c \
 		 ft_isalnum.c \
-		 ft_isalpha.c ft_putendl_fd.c ft_strchr_asm.c ft_memdel.c ft_strjoin_asm.c ft_error.c
+		 ft_isalpha.c ft_putendl_fd.c ft_strchr_asm.c ft_memdel.c ft_strjoin_asm.c ft_error.c ft_memcpy.c
 
 SRC = $(addprefix $(SRC_DIRECTORY, $(C_FILE))
 

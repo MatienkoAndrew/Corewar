@@ -19,13 +19,16 @@ t_asm	*initialization(int fd)
 	if (!(assem = (t_asm *)malloc(sizeof(t_asm))))
 		error("Not allocated memory");
 	assem->fd = fd;
-	assem->column = 0;
 	assem->row = 0;
-	assem->point = 0;
-	assem->marker= NULL;
-	assem->comment = NULL;
 	assem->name = NULL;
+	assem->metka = NULL;
+	assem->column = 0;
+	assem->b_code = NULL;
+	assem->comment = NULL;
 	assem->content = NULL;
+	assem->byte_pos = 0;
+	assem->arg_byte = 0;
+	assem->b_code_size = 0;
 	return (assem);
 }
 

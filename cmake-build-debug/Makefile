@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/F75CBAC3-0A25-47AE-B11F-A8A8DF17BD27/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/7814A9A5-7156-4AA7-8D85-4970192ADFD3/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/F75CBAC3-0A25-47AE-B11F-A8A8DF17BD27/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/7814A9A5-7156-4AA7-8D85-4970192ADFD3/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/fgeruss/Desktop/Corewar/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/F75CBAC3-0A25-47AE-B11F-A8A8DF17BD27/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/7814A9A5-7156-4AA7-8D85-4970192ADFD3/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/F75CBAC3-0A25-47AE-B11F-A8A8DF17BD27/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/7814A9A5-7156-4AA7-8D85-4970192ADFD3/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -392,6 +392,33 @@ libft/src/ft_itoa.s: libft/src/ft_itoa.c.s
 libft/src/ft_itoa.c.s:
 	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/libft/src/ft_itoa.c.s
 .PHONY : libft/src/ft_itoa.c.s
+
+libft/src/ft_memcpy.o: libft/src/ft_memcpy.c.o
+
+.PHONY : libft/src/ft_memcpy.o
+
+# target to build an object file
+libft/src/ft_memcpy.c.o:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/libft/src/ft_memcpy.c.o
+.PHONY : libft/src/ft_memcpy.c.o
+
+libft/src/ft_memcpy.i: libft/src/ft_memcpy.c.i
+
+.PHONY : libft/src/ft_memcpy.i
+
+# target to preprocess a source file
+libft/src/ft_memcpy.c.i:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/libft/src/ft_memcpy.c.i
+.PHONY : libft/src/ft_memcpy.c.i
+
+libft/src/ft_memcpy.s: libft/src/ft_memcpy.c.s
+
+.PHONY : libft/src/ft_memcpy.s
+
+# target to generate assembly for a file
+libft/src/ft_memcpy.c.s:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/libft/src/ft_memcpy.c.s
+.PHONY : libft/src/ft_memcpy.c.s
 
 libft/src/ft_memdel.o: libft/src/ft_memdel.c.o
 
@@ -1392,6 +1419,87 @@ src/asm/assembler.c.s:
 	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/assembler.c.s
 .PHONY : src/asm/assembler.c.s
 
+src/asm/crypt_label.o: src/asm/crypt_label.c.o
+
+.PHONY : src/asm/crypt_label.o
+
+# target to build an object file
+src/asm/crypt_label.c.o:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/crypt_label.c.o
+.PHONY : src/asm/crypt_label.c.o
+
+src/asm/crypt_label.i: src/asm/crypt_label.c.i
+
+.PHONY : src/asm/crypt_label.i
+
+# target to preprocess a source file
+src/asm/crypt_label.c.i:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/crypt_label.c.i
+.PHONY : src/asm/crypt_label.c.i
+
+src/asm/crypt_label.s: src/asm/crypt_label.c.s
+
+.PHONY : src/asm/crypt_label.s
+
+# target to generate assembly for a file
+src/asm/crypt_label.c.s:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/crypt_label.c.s
+.PHONY : src/asm/crypt_label.c.s
+
+src/asm/crypt_links.o: src/asm/crypt_links.c.o
+
+.PHONY : src/asm/crypt_links.o
+
+# target to build an object file
+src/asm/crypt_links.c.o:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/crypt_links.c.o
+.PHONY : src/asm/crypt_links.c.o
+
+src/asm/crypt_links.i: src/asm/crypt_links.c.i
+
+.PHONY : src/asm/crypt_links.i
+
+# target to preprocess a source file
+src/asm/crypt_links.c.i:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/crypt_links.c.i
+.PHONY : src/asm/crypt_links.c.i
+
+src/asm/crypt_links.s: src/asm/crypt_links.c.s
+
+.PHONY : src/asm/crypt_links.s
+
+# target to generate assembly for a file
+src/asm/crypt_links.c.s:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/crypt_links.c.s
+.PHONY : src/asm/crypt_links.c.s
+
+src/asm/crypt_operator.o: src/asm/crypt_operator.c.o
+
+.PHONY : src/asm/crypt_operator.o
+
+# target to build an object file
+src/asm/crypt_operator.c.o:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/crypt_operator.c.o
+.PHONY : src/asm/crypt_operator.c.o
+
+src/asm/crypt_operator.i: src/asm/crypt_operator.c.i
+
+.PHONY : src/asm/crypt_operator.i
+
+# target to preprocess a source file
+src/asm/crypt_operator.c.i:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/crypt_operator.c.i
+.PHONY : src/asm/crypt_operator.c.i
+
+src/asm/crypt_operator.s: src/asm/crypt_operator.c.s
+
+.PHONY : src/asm/crypt_operator.s
+
+# target to generate assembly for a file
+src/asm/crypt_operator.c.s:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/crypt_operator.c.s
+.PHONY : src/asm/crypt_operator.c.s
+
 src/asm/crypting.o: src/asm/crypting.c.o
 
 .PHONY : src/asm/crypting.o
@@ -1500,6 +1608,33 @@ src/asm/helper.c.s:
 	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/helper.c.s
 .PHONY : src/asm/helper.c.s
 
+src/asm/helper_1.o: src/asm/helper_1.c.o
+
+.PHONY : src/asm/helper_1.o
+
+# target to build an object file
+src/asm/helper_1.c.o:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/helper_1.c.o
+.PHONY : src/asm/helper_1.c.o
+
+src/asm/helper_1.i: src/asm/helper_1.c.i
+
+.PHONY : src/asm/helper_1.i
+
+# target to preprocess a source file
+src/asm/helper_1.c.i:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/helper_1.c.i
+.PHONY : src/asm/helper_1.c.i
+
+src/asm/helper_1.s: src/asm/helper_1.c.s
+
+.PHONY : src/asm/helper_1.s
+
+# target to generate assembly for a file
+src/asm/helper_1.c.s:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/helper_1.c.s
+.PHONY : src/asm/helper_1.c.s
+
 src/asm/initialization.o: src/asm/initialization.c.o
 
 .PHONY : src/asm/initialization.o
@@ -1526,6 +1661,60 @@ src/asm/initialization.s: src/asm/initialization.c.s
 src/asm/initialization.c.s:
 	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/initialization.c.s
 .PHONY : src/asm/initialization.c.s
+
+src/asm/link.o: src/asm/link.c.o
+
+.PHONY : src/asm/link.o
+
+# target to build an object file
+src/asm/link.c.o:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/link.c.o
+.PHONY : src/asm/link.c.o
+
+src/asm/link.i: src/asm/link.c.i
+
+.PHONY : src/asm/link.i
+
+# target to preprocess a source file
+src/asm/link.c.i:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/link.c.i
+.PHONY : src/asm/link.c.i
+
+src/asm/link.s: src/asm/link.c.s
+
+.PHONY : src/asm/link.s
+
+# target to generate assembly for a file
+src/asm/link.c.s:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/link.c.s
+.PHONY : src/asm/link.c.s
+
+src/asm/new_filename.o: src/asm/new_filename.c.o
+
+.PHONY : src/asm/new_filename.o
+
+# target to build an object file
+src/asm/new_filename.c.o:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/new_filename.c.o
+.PHONY : src/asm/new_filename.c.o
+
+src/asm/new_filename.i: src/asm/new_filename.c.i
+
+.PHONY : src/asm/new_filename.i
+
+# target to preprocess a source file
+src/asm/new_filename.c.i:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/new_filename.c.i
+.PHONY : src/asm/new_filename.c.i
+
+src/asm/new_filename.s: src/asm/new_filename.c.s
+
+.PHONY : src/asm/new_filename.s
+
+# target to generate assembly for a file
+src/asm/new_filename.c.s:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/new_filename.c.s
+.PHONY : src/asm/new_filename.c.s
 
 src/asm/parsing.o: src/asm/parsing.c.o
 
@@ -1581,6 +1770,33 @@ src/asm/validation.c.s:
 	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/validation.c.s
 .PHONY : src/asm/validation.c.s
 
+src/asm/write_bytecode.o: src/asm/write_bytecode.c.o
+
+.PHONY : src/asm/write_bytecode.o
+
+# target to build an object file
+src/asm/write_bytecode.c.o:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/write_bytecode.c.o
+.PHONY : src/asm/write_bytecode.c.o
+
+src/asm/write_bytecode.i: src/asm/write_bytecode.c.i
+
+.PHONY : src/asm/write_bytecode.i
+
+# target to preprocess a source file
+src/asm/write_bytecode.c.i:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/write_bytecode.c.i
+.PHONY : src/asm/write_bytecode.c.i
+
+src/asm/write_bytecode.s: src/asm/write_bytecode.c.s
+
+.PHONY : src/asm/write_bytecode.s
+
+# target to generate assembly for a file
+src/asm/write_bytecode.c.s:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/write_bytecode.c.s
+.PHONY : src/asm/write_bytecode.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1620,6 +1836,9 @@ help:
 	@echo "... libft/src/ft_itoa.o"
 	@echo "... libft/src/ft_itoa.i"
 	@echo "... libft/src/ft_itoa.s"
+	@echo "... libft/src/ft_memcpy.o"
+	@echo "... libft/src/ft_memcpy.i"
+	@echo "... libft/src/ft_memcpy.s"
 	@echo "... libft/src/ft_memdel.o"
 	@echo "... libft/src/ft_memdel.i"
 	@echo "... libft/src/ft_memdel.s"
@@ -1731,6 +1950,15 @@ help:
 	@echo "... src/asm/assembler.o"
 	@echo "... src/asm/assembler.i"
 	@echo "... src/asm/assembler.s"
+	@echo "... src/asm/crypt_label.o"
+	@echo "... src/asm/crypt_label.i"
+	@echo "... src/asm/crypt_label.s"
+	@echo "... src/asm/crypt_links.o"
+	@echo "... src/asm/crypt_links.i"
+	@echo "... src/asm/crypt_links.s"
+	@echo "... src/asm/crypt_operator.o"
+	@echo "... src/asm/crypt_operator.i"
+	@echo "... src/asm/crypt_operator.s"
 	@echo "... src/asm/crypting.o"
 	@echo "... src/asm/crypting.i"
 	@echo "... src/asm/crypting.s"
@@ -1743,15 +1971,27 @@ help:
 	@echo "... src/asm/helper.o"
 	@echo "... src/asm/helper.i"
 	@echo "... src/asm/helper.s"
+	@echo "... src/asm/helper_1.o"
+	@echo "... src/asm/helper_1.i"
+	@echo "... src/asm/helper_1.s"
 	@echo "... src/asm/initialization.o"
 	@echo "... src/asm/initialization.i"
 	@echo "... src/asm/initialization.s"
+	@echo "... src/asm/link.o"
+	@echo "... src/asm/link.i"
+	@echo "... src/asm/link.s"
+	@echo "... src/asm/new_filename.o"
+	@echo "... src/asm/new_filename.i"
+	@echo "... src/asm/new_filename.s"
 	@echo "... src/asm/parsing.o"
 	@echo "... src/asm/parsing.i"
 	@echo "... src/asm/parsing.s"
 	@echo "... src/asm/validation.o"
 	@echo "... src/asm/validation.i"
 	@echo "... src/asm/validation.s"
+	@echo "... src/asm/write_bytecode.o"
+	@echo "... src/asm/write_bytecode.i"
+	@echo "... src/asm/write_bytecode.s"
 .PHONY : help
 
 

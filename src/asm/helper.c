@@ -22,7 +22,7 @@ int 	is_help(char c)
 
 int 	is_conditions(char c)
 {
-	if (c == ' ' || c == '\n' || c == '\0' || c == ',')
+	if (c == ' ' || c == '\n' || c == '\0' || c == ',' || c == '\t')
 		return (1);
 	return (0);
 }
@@ -39,6 +39,8 @@ int 	is_registr(const char *str)
 		while (ft_isdigit(str[i]))
 			i++;
 		num = ft_atoi(str + 1);
+		if (num == 0)
+			error("Register cannot be \'r0\'");
 		return (str[i] == '\0' && num > 0);
 	}
 	return (0);

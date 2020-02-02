@@ -31,12 +31,14 @@ void	parser_symb(t_asm *assem, char *line, int col, t_cont *cont)
 	else if (assem->column - i > 0 && is_conditions(line[assem->column]))
 	{
 		cont->content = ft_strsub(line, col, assem->column - col);
+		if (start_condition(cont))
+			ft_error_asm(cont);
 		if (cont->type == INDIRECT)
 			cont->type = (is_registr(cont->content)) ? REGISTER : OPERATOR;
 		add_content(&assem, cont);
 	}
 	else
-		ft_printf("Lexical error at [%d,%d]", assem->row, assem->column);
+		lexical_error(assem);
 }
 
 void	parser_string(t_asm *assem, char **line, int col, t_cont *cont)
@@ -54,7 +56,7 @@ void	parser_string(t_asm *assem, char **line, int col, t_cont *cont)
 	if (size == -1)
 		error("Bad file");
 	else if (size == 0)
-		ft_printf("Lexical error at [%d:%d]", assem->row, assem->column);
+		lexical_error(assem);
 	if (!(cont->content = ft_strsub(*line, col, end - &((*line)[col]) + 1)))
 		error("Not allocated memory");
 	new_line(line, end, assem->column);
@@ -83,5 +85,5 @@ void	parser_another(t_asm *assem, char *line, int start, t_cont *cont)
 		parser_symb(assem, line, start, cont);
 	}
 	else
-		ft_printf("Lexical error [%d:%d]", assem->row, assem->column);
+		lexical_error(assem);
 }

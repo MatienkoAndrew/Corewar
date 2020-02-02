@@ -13,74 +13,76 @@
 #include "asm.h"
 #include "op.h"
 
-int 	skip(t_cont *content)
+void	*ft_realloc(void *ptr, size_t size)
+{
+	char	*newptr;
+
+	if (!size && ptr)
+	{
+		if (!(newptr = (char *)malloc(1)))
+			return (NULL);
+		ft_memdel(&ptr);
+		return (newptr);
+	}
+	if (!(newptr = (char *)malloc(size)))
+		return (NULL);
+	if (ptr)
+	{
+		ft_memcpy(newptr, ptr, size);
+		ft_memdel(&ptr);
+	}
+	return (newptr);
+}
+
+
+void	renew_byte_code_buffer(t_asm *assem)
+{
+//	char 	*temp;
+//
+//	temp = NULL;
+//	assem->b_code_size += CHAMP_MAX_SIZE;
+//	if (assem->b_code == NULL)
+//	{
+//		if (!(assem->b_code = ft_strnew((size_t)assem->b_code_size + 14)))
+//			error("Not allocated memory");
+//	}
+//	else
+//	{
+////		if (!(temp = ft_strdup(assem->b_code)))
+////			error(MEMORY);
+//		if (!(temp = ft_strnew((size_t)assem->b_code_size + 14)))
+//			error(MEMORY);
+//		if (!ft_memcpy(temp, assem->b_code, (size_t)ft_strlen(assem->b_code)))
+//			error(MEMORY);
+//
+//		ft_strdel(&assem->b_code);
+//		if (!(assem->b_code = ft_strnew((size_t)assem->b_code_size + 14)))
+//			error("Not allocated memory");
+//		if (!ft_memcpy(assem->b_code, temp, (size_t)ft_strlen(temp)))
+//			error(MEMORY);
+//		ft_strdel(&temp);
+//	}
+
+
+	assem->b_code_size += CHAMP_MAX_SIZE;
+	if (!(assem->b_code = (char *)ft_realloc(assem->b_code, (size_t)assem->b_code_size + 14)))
+		error(MEMORY);
+
+
+
+
+//	assem->b_code_size += CHAMP_MAX_SIZE;
+//	if (!(assem->b_code = (char *)realloc(assem->b_code,
+//										 ((size_t)assem->b_code_size + 14))))
+//		error("awd");
+}
+
+int		skip(t_cont *content)
 {
 	return (content->type == NEW_LINE || \
 			content->type == COMMAND || \
 			content->type == SEPARATOR || \
 			content->type == STRING);
-}
-
-t_mark	*marker_exist(t_mark *marker, char *name)
-{
-	t_mark	*temp;
-
-	temp = marker;
-	while (temp)
-	{
-		if (!ft_strcmp(temp->name, name))
-			return (temp);
-		temp = temp->next;
-	}
-	return (temp);
-}
-
-t_mark	*init_marker(char *name, int point)
-{
-	t_mark	*marker;
-
-	marker = NULL;
-	if (!(marker = (t_mark *)malloc(sizeof(t_mark))))
-		error("Not allocated memory");
-	if (!(marker->name = ft_strdup(name)))
-		error("Not allocated memory");
-	marker->count = point;
-	marker->link = NULL;
-	marker->next = NULL;
-	return (marker);
-}
-
-void 	new_marker(t_mark **marker, t_mark *new)
-{
-	t_mark	*point;
-
-	if (marker)
-	{
-		if (*marker)
-		{
-			point = *marker;
-			while (point->next)
-				point = point->next;
-			point->next = new;
-		}
-		else
-			*marker = new;
-	}
-}
-
-void	crypt_label(t_asm *assem, t_cont **content)
-{
-	char 	*name;
-	t_mark	*marker;
-	char 	*name_c;
-
-	name_c = (*content)->content;
-	if (!(name = ft_strsub(name_c, 0, ft_strlen(name_c) - 1)))
-		error("Not allocated memory");
-	marker = marker_exist(assem->marker, name);
-	if (marker == NULL)
-		new_marker(&assem->marker, init_marker(name, assem->point));
-	ft_strdel(&name);
 }
 
 void	crypting(t_asm *assem)
@@ -90,9 +92,15 @@ void	crypting(t_asm *assem)
 	content = assem->content;
 	while (content->type != END)
 	{
+		if (assem->byte_pos >= assem->b_code_size)
+			renew_byte_code_buffer(assem);
+		assem->arg_byte = assem->byte_pos;
 		if (content->type == LABEL)
 			crypt_label(assem, &content);
+		if (content->type == OPERATOR)
+			crypt_operator(assem, &content);
 		if (skip(content))
 			content = content->next;
 	}
+
 }

@@ -6,7 +6,7 @@
 #    By: fgeruss <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/29 17:40:37 by fgeruss           #+#    #+#              #
-#    Updated: 2020/01/24 15:05:51 by fgeruss          ###   ########.fr        #
+#    Updated: 2020/02/01 20:02:51 by fgeruss          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,13 @@ ASM_SOURCES_LIST = asm.c \
 				   parsing.c \
 				   helper.c \
 				   get_name_comment.c \
-				   ft_error_asm.c crypting.c
+				   ft_error_asm.c \
+				   crypting.c \
+				   crypt_label.c \
+				   crypt_operator.c \
+				   helper_1.c \
+				   link.c \
+				   crypt_links.c new_filename.c write_bytecode.c
 ASM_SOURCES = $(addprefix $(ASM_SOURCES_DIRECTORY), $(ASM_SOURCES_LIST))
 
 # Objects

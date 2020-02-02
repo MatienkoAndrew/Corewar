@@ -56,6 +56,8 @@ void	parser(t_asm *assem, char **line)
 		else
 			parser_another(assem, *line, assem->column - 1, init_content(assem, DIRECT));
 	}
+	else if (*(*line + assem->column) == LABEL_CHAR)
+		parser_symb(assem, *line, assem->column++, init_content(assem, INDIRECT_LABEL));
 	else
 		parser_another(assem, *line, assem->column, init_content(assem, INDIRECT));
 }

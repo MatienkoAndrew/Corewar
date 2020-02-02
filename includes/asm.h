@@ -16,6 +16,13 @@
 # include "ft_printf.h"
 # include "op.h"
 
+# define MEMORY "Not allocated memory"
+# define MAGIC_HEADER 4
+# define CHAMPION_NAME PROG_NAME_LENGTH
+# define NULL_CW 4
+# define CHAMPION_EXEC_CODE_SIZE 4
+# define CHAMPION_COMMENT COMMENT_LENGTH
+
 typedef enum
 {
 	false,
@@ -58,19 +65,19 @@ typedef struct		s_link
 {
 	int 			row;
 	int 			column;
-	int 			start;
-	int 			point;
-	size_t 			size;
+	int 			byte_pos;
+	int 			arg_byte;
+	int 			size;
 	struct s_link	*next;
 }					t_link;
 
-typedef struct		s_mark
+typedef struct		s_metka
 {
 	char			*name;
-	int				count;
+	int				byte;
 	t_link			*link;
-	struct s_mark	*next;
-}					t_mark;
+	struct s_metka  *next;
+}					t_metka;
 
 typedef struct		s_cont
 {
@@ -86,11 +93,14 @@ typedef struct		s_asm
 	int 			fd;
 	int 			row;
 	int 			column;
-	int 			point;
+	int 			byte_pos;
+	int 			b_code_size;
+	int 			arg_byte;
+	char 			*b_code;
 	char 			*name;
 	char 			*comment;
 	t_cont			*content;
-	t_mark			*marker;
+	t_metka         *metka;
 }					t_asm;
 
 typedef struct	s_op
@@ -107,7 +117,10 @@ typedef struct	s_op
 ** Array
 */
 
-static t_op		g_op[16] = {{.name = "live", .code = 0x01,
+static t_op		g_op[16] = {
+{
+				.name = "live",
+ 				.code = 0x01,
 				.args_num = 1,
 				.args_types_code = false,
 				.args_types = {T_DIR, 0, 0},
@@ -252,5 +265,22 @@ int					is_help(char c);
 void				get_name_comment(t_asm *assem);
 void				ft_error_asm(t_cont *content);
 void				crypting(t_asm *assem);
+void				crypt_label(t_asm *assem, t_cont **content);
+void				new_metka(t_metka **metka, t_metka *new);
+t_metka				*init_metka(char *name, int point);
+t_metka				*metka_exist(t_metka *metka, char *name);
+void				crypt_operator(t_asm *assem, t_cont **content);
+signed char			get_type(t_type type);
+t_op				*get_operation(char *name);
+void				convert_to_hex_asm(int nbr, char *b_code, int pos, int size);
+void				new_link(t_link **link, t_link *new);
+t_link				*init_link(t_asm *assem, t_cont *content, int size);
+void				crypt_links(t_asm *assem);
+void				new_filename(char **filename, int *fd);
+void				write_bytecode(int fd, t_asm *assem);
+void				lexical_error(t_asm *assem);
+int					start_condition(t_cont *cont);
+void				argument_error(t_op *op, t_cont *cont, int count);
+void				operator_error(t_cont *cont);
 
 #endif

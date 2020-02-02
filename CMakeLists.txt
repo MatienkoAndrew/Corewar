@@ -61,6 +61,7 @@ add_executable(Corewar
         libft/src/ft_memdel.c
         libft/src/ft_strjoin_asm.c
         libft/src/ft_error.c
+        libft/src/ft_memcpy.c
     src/asm/asm.c
     src/asm/assembler.c
     src/asm/initialization.c
@@ -69,4 +70,11 @@ add_executable(Corewar
         src/asm/helper.c
         src/asm/get_name_comment.c
         src/asm/ft_error_asm.c
-        src/asm/crypting.c)
+        src/asm/crypting.c
+        src/asm/crypt_label.c
+        src/asm/crypt_operator.c
+        src/asm/helper_1.c
+        src/asm/link.c
+        src/asm/crypt_links.c
+        src/asm/new_filename.c
+        src/asm/write_bytecode.c)

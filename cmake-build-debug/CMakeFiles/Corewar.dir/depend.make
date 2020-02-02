@@ -37,6 +37,9 @@ CMakeFiles/Corewar.dir/libft/src/ft_isdigit.c.o: ../libft/src/ft_isdigit.c
 CMakeFiles/Corewar.dir/libft/src/ft_itoa.c.o: ../libft/includes/libft.h
 CMakeFiles/Corewar.dir/libft/src/ft_itoa.c.o: ../libft/src/ft_itoa.c
 
+CMakeFiles/Corewar.dir/libft/src/ft_memcpy.c.o: ../libft/includes/libft.h
+CMakeFiles/Corewar.dir/libft/src/ft_memcpy.c.o: ../libft/src/ft_memcpy.c
+
 CMakeFiles/Corewar.dir/libft/src/ft_memdel.c.o: ../libft/includes/libft.h
 CMakeFiles/Corewar.dir/libft/src/ft_memdel.c.o: ../libft/src/ft_memdel.c
 
@@ -189,6 +192,27 @@ CMakeFiles/Corewar.dir/src/asm/assembler.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/Corewar.dir/src/asm/assembler.c.o: ../libft/includes/libft.h
 CMakeFiles/Corewar.dir/src/asm/assembler.c.o: ../src/asm/assembler.c
 
+CMakeFiles/Corewar.dir/src/asm/crypt_label.c.o: ../includes/asm.h
+CMakeFiles/Corewar.dir/src/asm/crypt_label.c.o: ../includes/op.h
+CMakeFiles/Corewar.dir/src/asm/crypt_label.c.o: ../libft/includes/ft_printf.h
+CMakeFiles/Corewar.dir/src/asm/crypt_label.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/Corewar.dir/src/asm/crypt_label.c.o: ../libft/includes/libft.h
+CMakeFiles/Corewar.dir/src/asm/crypt_label.c.o: ../src/asm/crypt_label.c
+
+CMakeFiles/Corewar.dir/src/asm/crypt_links.c.o: ../includes/asm.h
+CMakeFiles/Corewar.dir/src/asm/crypt_links.c.o: ../includes/op.h
+CMakeFiles/Corewar.dir/src/asm/crypt_links.c.o: ../libft/includes/ft_printf.h
+CMakeFiles/Corewar.dir/src/asm/crypt_links.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/Corewar.dir/src/asm/crypt_links.c.o: ../libft/includes/libft.h
+CMakeFiles/Corewar.dir/src/asm/crypt_links.c.o: ../src/asm/crypt_links.c
+
+CMakeFiles/Corewar.dir/src/asm/crypt_operator.c.o: ../includes/asm.h
+CMakeFiles/Corewar.dir/src/asm/crypt_operator.c.o: ../includes/op.h
+CMakeFiles/Corewar.dir/src/asm/crypt_operator.c.o: ../libft/includes/ft_printf.h
+CMakeFiles/Corewar.dir/src/asm/crypt_operator.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/Corewar.dir/src/asm/crypt_operator.c.o: ../libft/includes/libft.h
+CMakeFiles/Corewar.dir/src/asm/crypt_operator.c.o: ../src/asm/crypt_operator.c
+
 CMakeFiles/Corewar.dir/src/asm/crypting.c.o: ../includes/asm.h
 CMakeFiles/Corewar.dir/src/asm/crypting.c.o: ../includes/op.h
 CMakeFiles/Corewar.dir/src/asm/crypting.c.o: ../libft/includes/ft_printf.h
@@ -217,12 +241,33 @@ CMakeFiles/Corewar.dir/src/asm/helper.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/Corewar.dir/src/asm/helper.c.o: ../libft/includes/libft.h
 CMakeFiles/Corewar.dir/src/asm/helper.c.o: ../src/asm/helper.c
 
+CMakeFiles/Corewar.dir/src/asm/helper_1.c.o: ../includes/asm.h
+CMakeFiles/Corewar.dir/src/asm/helper_1.c.o: ../includes/op.h
+CMakeFiles/Corewar.dir/src/asm/helper_1.c.o: ../libft/includes/ft_printf.h
+CMakeFiles/Corewar.dir/src/asm/helper_1.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/Corewar.dir/src/asm/helper_1.c.o: ../libft/includes/libft.h
+CMakeFiles/Corewar.dir/src/asm/helper_1.c.o: ../src/asm/helper_1.c
+
 CMakeFiles/Corewar.dir/src/asm/initialization.c.o: ../includes/asm.h
 CMakeFiles/Corewar.dir/src/asm/initialization.c.o: ../includes/op.h
 CMakeFiles/Corewar.dir/src/asm/initialization.c.o: ../libft/includes/ft_printf.h
 CMakeFiles/Corewar.dir/src/asm/initialization.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/Corewar.dir/src/asm/initialization.c.o: ../libft/includes/libft.h
 CMakeFiles/Corewar.dir/src/asm/initialization.c.o: ../src/asm/initialization.c
+
+CMakeFiles/Corewar.dir/src/asm/link.c.o: ../includes/asm.h
+CMakeFiles/Corewar.dir/src/asm/link.c.o: ../includes/op.h
+CMakeFiles/Corewar.dir/src/asm/link.c.o: ../libft/includes/ft_printf.h
+CMakeFiles/Corewar.dir/src/asm/link.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/Corewar.dir/src/asm/link.c.o: ../libft/includes/libft.h
+CMakeFiles/Corewar.dir/src/asm/link.c.o: ../src/asm/link.c
+
+CMakeFiles/Corewar.dir/src/asm/new_filename.c.o: ../includes/asm.h
+CMakeFiles/Corewar.dir/src/asm/new_filename.c.o: ../includes/op.h
+CMakeFiles/Corewar.dir/src/asm/new_filename.c.o: ../libft/includes/ft_printf.h
+CMakeFiles/Corewar.dir/src/asm/new_filename.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/Corewar.dir/src/asm/new_filename.c.o: ../libft/includes/libft.h
+CMakeFiles/Corewar.dir/src/asm/new_filename.c.o: ../src/asm/new_filename.c
 
 CMakeFiles/Corewar.dir/src/asm/parsing.c.o: ../includes/asm.h
 CMakeFiles/Corewar.dir/src/asm/parsing.c.o: ../includes/op.h
@@ -237,4 +282,11 @@ CMakeFiles/Corewar.dir/src/asm/validation.c.o: ../libft/includes/ft_printf.h
 CMakeFiles/Corewar.dir/src/asm/validation.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/Corewar.dir/src/asm/validation.c.o: ../libft/includes/libft.h
 CMakeFiles/Corewar.dir/src/asm/validation.c.o: ../src/asm/validation.c
+
+CMakeFiles/Corewar.dir/src/asm/write_bytecode.c.o: ../includes/asm.h
+CMakeFiles/Corewar.dir/src/asm/write_bytecode.c.o: ../includes/op.h
+CMakeFiles/Corewar.dir/src/asm/write_bytecode.c.o: ../libft/includes/ft_printf.h
+CMakeFiles/Corewar.dir/src/asm/write_bytecode.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/Corewar.dir/src/asm/write_bytecode.c.o: ../libft/includes/libft.h
+CMakeFiles/Corewar.dir/src/asm/write_bytecode.c.o: ../src/asm/write_bytecode.c
 
