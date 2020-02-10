@@ -12,45 +12,9 @@
 
 #include "asm.h"
 
-void	freeer(t_asm *assem)
-{
-	t_cont	*temp;
-	t_metka	*temp_m;
-	t_link 	*temp_l;
-
-	ft_strdel(&assem->name);
-	ft_strdel(&assem->comment);
-	ft_strdel(&assem->b_code);
-	temp = assem->content;
-	while (assem->content)
-	{
-		ft_strdel(&assem->content->content);
-		temp = assem->content->next;
-		free(assem->content);
-		assem->content = NULL;
-		assem->content = temp;
-	}
-	while (assem->metka)
-	{
-		while (assem->metka->link)
-		{
-			temp_l = assem->metka->link->next;
-			free(assem->metka->link);
-			assem->metka->link = NULL;
-			assem->metka->link = temp_l;
-		}
-		ft_strdel(&assem->metka->name);
-		temp_m = assem->metka->next;
-		free(assem->metka);
-		assem->metka = NULL;
-		assem->metka = temp_m;
-	}
-	free(assem);
-}
-
 void	assembler(char *file_name)
 {
-	int 	fd;
+	int		fd;
 	t_asm	*assem;
 
 	if ((fd = open(file_name, O_RDONLY)) == -1)

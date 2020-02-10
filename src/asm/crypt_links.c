@@ -22,7 +22,7 @@ void	crypt_links(t_asm *assem)
 	while (metka)
 	{
 		if (metka->byte == -1)
-			error("NOT GOOD"); //NF
+			metka_error(metka);
 		else
 		{
 			link = metka->link;
@@ -33,12 +33,10 @@ void	crypt_links(t_asm *assem)
 							assem->b_code, link->byte_pos, link->size);
 				else
 					convert_to_hex_asm(metka->byte - link->arg_byte,
-										   assem->b_code, link->byte_pos, link->size);
-
+							assem->b_code, link->byte_pos, link->size);
 				link = link->next;
 			}
 		}
 		metka = metka->next;
 	}
 }
-

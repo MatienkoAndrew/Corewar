@@ -34,47 +34,12 @@ void	*ft_realloc(void *ptr, size_t size)
 	return (newptr);
 }
 
-
 void	renew_byte_code_buffer(t_asm *assem)
 {
-//	char 	*temp;
-//
-//	temp = NULL;
-//	assem->b_code_size += CHAMP_MAX_SIZE;
-//	if (assem->b_code == NULL)
-//	{
-//		if (!(assem->b_code = ft_strnew((size_t)assem->b_code_size + 14)))
-//			error("Not allocated memory");
-//	}
-//	else
-//	{
-////		if (!(temp = ft_strdup(assem->b_code)))
-////			error(MEMORY);
-//		if (!(temp = ft_strnew((size_t)assem->b_code_size + 14)))
-//			error(MEMORY);
-//		if (!ft_memcpy(temp, assem->b_code, (size_t)ft_strlen(assem->b_code)))
-//			error(MEMORY);
-//
-//		ft_strdel(&assem->b_code);
-//		if (!(assem->b_code = ft_strnew((size_t)assem->b_code_size + 14)))
-//			error("Not allocated memory");
-//		if (!ft_memcpy(assem->b_code, temp, (size_t)ft_strlen(temp)))
-//			error(MEMORY);
-//		ft_strdel(&temp);
-//	}
-
-
 	assem->b_code_size += CHAMP_MAX_SIZE;
-	if (!(assem->b_code = (char *)ft_realloc(assem->b_code, (size_t)assem->b_code_size + 14)))
+	if (!(assem->b_code = (char *)ft_realloc(assem->b_code,
+			(size_t)assem->b_code_size + 14)))
 		error(MEMORY);
-
-
-
-
-//	assem->b_code_size += CHAMP_MAX_SIZE;
-//	if (!(assem->b_code = (char *)realloc(assem->b_code,
-//										 ((size_t)assem->b_code_size + 14))))
-//		error("awd");
 }
 
 int		skip(t_cont *content)
@@ -101,6 +66,7 @@ void	crypting(t_asm *assem)
 			crypt_operator(assem, &content);
 		if (skip(content))
 			content = content->next;
+		else
+			ft_error_asm(content);
 	}
-
 }

@@ -50,7 +50,7 @@ ASM_SOURCES_LIST = asm.c \
 				   crypt_operator.c \
 				   helper_1.c \
 				   link.c \
-				   crypt_links.c new_filename.c write_bytecode.c
+				   crypt_links.c new_filename.c write_bytecode.c freeer.c crypt_arguments.c
 ASM_SOURCES = $(addprefix $(ASM_SOURCES_DIRECTORY), $(ASM_SOURCES_LIST))
 
 # Objects

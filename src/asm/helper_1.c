@@ -13,7 +13,7 @@
 #include "asm.h"
 #include "op.h"
 
-int 	start_condition(t_cont *cont)
+int				start_condition(t_cont *cont)
 {
 	return (cont->type == COMMAND &&
 			ft_strcmp(cont->content, ".name") &&
@@ -25,18 +25,18 @@ int 	start_condition(t_cont *cont)
 ** число в 16сс
 */
 
-void	convert_to_hex_asm(int nbr, char *b_code, int pos, int size)
+void			convert_to_hex_asm(int nbr, char *b_code, int pos, int size)
 {
-	int 	i;
+	int		i;
 
 	i = -8;
 	while (size-- > 0)
 		b_code[pos + size] = (unsigned char)(nbr >> (i += 8));
 }
 
-t_op	*get_operation(char *name)
+t_op			*get_operation(char *name)
 {
-	int 	i;
+	int		i;
 
 	i = -1;
 	while (++i < 16)

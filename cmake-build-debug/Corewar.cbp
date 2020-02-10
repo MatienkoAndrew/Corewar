@@ -251,6 +251,9 @@
 		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/assembler.c">
 			<Option target="Corewar"/>
 		</Unit>
+		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/crypt_arguments.c">
+			<Option target="Corewar"/>
+		</Unit>
 		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/crypt_label.c">
 			<Option target="Corewar"/>
 		</Unit>
@@ -261,6 +264,9 @@
 			<Option target="Corewar"/>
 		</Unit>
 		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/crypting.c">
+			<Option target="Corewar"/>
+		</Unit>
+		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/freeer.c">
 			<Option target="Corewar"/>
 		</Unit>
 		<Unit filename="/Users/fgeruss/Desktop/Corewar/src/asm/ft_error_asm.c">

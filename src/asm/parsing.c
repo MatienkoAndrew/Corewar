@@ -15,7 +15,7 @@
 
 void	parser_symb(t_asm *assem, char *line, int col, t_cont *cont)
 {
-	int 	i;
+	int		i;
 
 	cont->column = col;
 	i = assem->column;
@@ -43,9 +43,9 @@ void	parser_symb(t_asm *assem, char *line, int col, t_cont *cont)
 
 void	parser_string(t_asm *assem, char **line, int col, t_cont *cont)
 {
-	char 	*end;
+	char	*end;
 	int		size;
-	char 	*str;
+	char	*str;
 
 	assem->column = col;
 	size = 1;
@@ -66,14 +66,15 @@ void	parser_string(t_asm *assem, char **line, int col, t_cont *cont)
 
 void	parser_another(t_asm *assem, char *line, int start, t_cont *cont)
 {
-	int 	i;
+	int		i;
 
 	cont->column = start;
 	line[assem->column] == '-' ? assem->column++ : 0;
 	i = assem->column;
 	while (ft_isdigit(line[assem->column]))
 		assem->column += 1;
-	if (assem->column - i > 0 && (cont->type == DIRECT || is_conditions(line[assem->column])))
+	if (assem->column - i > 0 &&
+		(cont->type == DIRECT || is_conditions(line[assem->column])))
 	{
 		if (!(cont->content = ft_strsub(line, start, assem->column - start)))
 			error("Not allocated memory");

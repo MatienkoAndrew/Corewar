@@ -14,8 +14,7 @@
 
 char	*ft_strchr_asm(const char *s, int c)
 {
-	if(!s)
+	if (!s)
 		return (NULL);
 	return (ft_strchr(s, c));
 }
-

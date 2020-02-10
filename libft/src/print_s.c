@@ -139,9 +139,10 @@ int		print_s(va_list ap, t_att *attr)
 	{
 		len = print_split(attr, size, str);
 		if (flager == 1)
-			free(str);
+			ft_strdel(&str);
 		return (len);
 	}
 	ft_putstr(str);
+	(flager == 1) ? ft_strdel(&str) : 0;
 	return (size);
 }

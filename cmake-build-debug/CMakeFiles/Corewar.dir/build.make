@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/7814A9A5-7156-4AA7-8D85-4970192ADFD3/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/D29B3B30-4B43-4108-8F0D-F5B02ADF8751/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/7814A9A5-7156-4AA7-8D85-4970192ADFD3/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/D29B3B30-4B43-4108-8F0D-F5B02ADF8751/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -863,6 +863,32 @@ CMakeFiles/Corewar.dir/src/asm/write_bytecode.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Corewar.dir/src/asm/write_bytecode.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fgeruss/Desktop/Corewar/src/asm/write_bytecode.c -o CMakeFiles/Corewar.dir/src/asm/write_bytecode.c.s
 
+CMakeFiles/Corewar.dir/src/asm/freeer.c.o: CMakeFiles/Corewar.dir/flags.make
+CMakeFiles/Corewar.dir/src/asm/freeer.c.o: ../src/asm/freeer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fgeruss/Desktop/Corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/Corewar.dir/src/asm/freeer.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Corewar.dir/src/asm/freeer.c.o   -c /Users/fgeruss/Desktop/Corewar/src/asm/freeer.c
+
+CMakeFiles/Corewar.dir/src/asm/freeer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Corewar.dir/src/asm/freeer.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fgeruss/Desktop/Corewar/src/asm/freeer.c > CMakeFiles/Corewar.dir/src/asm/freeer.c.i
+
+CMakeFiles/Corewar.dir/src/asm/freeer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Corewar.dir/src/asm/freeer.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fgeruss/Desktop/Corewar/src/asm/freeer.c -o CMakeFiles/Corewar.dir/src/asm/freeer.c.s
+
+CMakeFiles/Corewar.dir/src/asm/crypt_arguments.c.o: CMakeFiles/Corewar.dir/flags.make
+CMakeFiles/Corewar.dir/src/asm/crypt_arguments.c.o: ../src/asm/crypt_arguments.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fgeruss/Desktop/Corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/Corewar.dir/src/asm/crypt_arguments.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Corewar.dir/src/asm/crypt_arguments.c.o   -c /Users/fgeruss/Desktop/Corewar/src/asm/crypt_arguments.c
+
+CMakeFiles/Corewar.dir/src/asm/crypt_arguments.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Corewar.dir/src/asm/crypt_arguments.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/fgeruss/Desktop/Corewar/src/asm/crypt_arguments.c > CMakeFiles/Corewar.dir/src/asm/crypt_arguments.c.i
+
+CMakeFiles/Corewar.dir/src/asm/crypt_arguments.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Corewar.dir/src/asm/crypt_arguments.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/fgeruss/Desktop/Corewar/src/asm/crypt_arguments.c -o CMakeFiles/Corewar.dir/src/asm/crypt_arguments.c.s
+
 # Object files for target Corewar
 Corewar_OBJECTS = \
 "CMakeFiles/Corewar.dir/libft/src/attribute.c.o" \
@@ -926,7 +952,9 @@ Corewar_OBJECTS = \
 "CMakeFiles/Corewar.dir/src/asm/link.c.o" \
 "CMakeFiles/Corewar.dir/src/asm/crypt_links.c.o" \
 "CMakeFiles/Corewar.dir/src/asm/new_filename.c.o" \
-"CMakeFiles/Corewar.dir/src/asm/write_bytecode.c.o"
+"CMakeFiles/Corewar.dir/src/asm/write_bytecode.c.o" \
+"CMakeFiles/Corewar.dir/src/asm/freeer.c.o" \
+"CMakeFiles/Corewar.dir/src/asm/crypt_arguments.c.o"
 
 # External object files for target Corewar
 Corewar_EXTERNAL_OBJECTS =
@@ -993,9 +1021,11 @@ Corewar: CMakeFiles/Corewar.dir/src/asm/link.c.o
 Corewar: CMakeFiles/Corewar.dir/src/asm/crypt_links.c.o
 Corewar: CMakeFiles/Corewar.dir/src/asm/new_filename.c.o
 Corewar: CMakeFiles/Corewar.dir/src/asm/write_bytecode.c.o
+Corewar: CMakeFiles/Corewar.dir/src/asm/freeer.c.o
+Corewar: CMakeFiles/Corewar.dir/src/asm/crypt_arguments.c.o
 Corewar: CMakeFiles/Corewar.dir/build.make
 Corewar: CMakeFiles/Corewar.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/fgeruss/Desktop/Corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Linking C executable Corewar"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/fgeruss/Desktop/Corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Linking C executable Corewar"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Corewar.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

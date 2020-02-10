@@ -17,7 +17,7 @@ void	write_string(char **bytecode, int point, char *name, int len)
 {
 	int		i;
 
-	len = (len == 0) ? ft_strlen(name): len;
+	len = (len == 0) ? ft_strlen(name) : len;
 	i = -1;
 	while (++i < len)
 		(*bytecode)[point++] = name[i];
@@ -25,11 +25,12 @@ void	write_string(char **bytecode, int point, char *name, int len)
 
 void	write_bytecode(int fd, t_asm *assem)
 {
-	int 	len_bytecode;
-	int 	point;
-	char 	*bytecode;
+	int		len_bytecode;
+	int		point;
+	char	*bytecode;
 
-	len_bytecode = MAGIC_HEADER + CHAMPION_NAME + NULL_CW + CHAMPION_EXEC_CODE_SIZE +
+	len_bytecode = MAGIC_HEADER + CHAMPION_NAME +
+			NULL_CW + CHAMPION_EXEC_CODE_SIZE +
 			CHAMPION_COMMENT + NULL_CW + assem->byte_pos;
 	if (!(bytecode = ft_strnew((size_t)len_bytecode)))
 		error(MEMORY);

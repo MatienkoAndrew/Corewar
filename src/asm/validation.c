@@ -46,26 +46,31 @@ void	parser(t_asm *assem, char **line)
 	else if (*(*line + assem->column) == '\n' && ++assem->column)
 		add_content(&assem, init_content(assem, NEW_LINE));
 	else if (*(*line + assem->column) == '.')
-		parser_symb(assem, *line, assem->column++, init_content(assem, COMMAND));
+		parser_symb(assem, *line,
+				assem->column++, init_content(assem, COMMAND));
 	else if (*(*line + assem->column) == '\"')
 		parser_string(assem, line, assem->column, init_content(assem, STRING));
 	else if (*(*line + assem->column) == DIRECT_CHAR && ++assem->column)
 	{
 		if (*(*line + assem->column) == LABEL_CHAR && ++assem->column)
-			parser_symb(assem, *line, assem->column - 2, init_content(assem, DIRECT_LABEL));
+			parser_symb(assem, *line, assem->column - 2,
+					init_content(assem, DIRECT_LABEL));
 		else
-			parser_another(assem, *line, assem->column - 1, init_content(assem, DIRECT));
+			parser_another(assem, *line,
+					assem->column - 1, init_content(assem, DIRECT));
 	}
 	else if (*(*line + assem->column) == LABEL_CHAR)
-		parser_symb(assem, *line, assem->column++, init_content(assem, INDIRECT_LABEL));
+		parser_symb(assem, *line, assem->column++,
+				init_content(assem, INDIRECT_LABEL));
 	else
-		parser_another(assem, *line, assem->column, init_content(assem, INDIRECT));
+		parser_another(assem, *line, assem->column,
+				init_content(assem, INDIRECT));
 }
 
 void	validation(t_asm *assem)
 {
 	int		size;
-	char 	*line;
+	char	*line;
 
 	size = 0;
 	line = NULL;

@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/7814A9A5-7156-4AA7-8D85-4970192ADFD3/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/D29B3B30-4B43-4108-8F0D-F5B02ADF8751/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/7814A9A5-7156-4AA7-8D85-4970192ADFD3/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/D29B3B30-4B43-4108-8F0D-F5B02ADF8751/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/fgeruss/Desktop/Corewar/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/7814A9A5-7156-4AA7-8D85-4970192ADFD3/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/D29B3B30-4B43-4108-8F0D-F5B02ADF8751/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/7814A9A5-7156-4AA7-8D85-4970192ADFD3/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n00010m0000850/T/AppTranslocation/D29B3B30-4B43-4108-8F0D-F5B02ADF8751/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -1419,6 +1419,33 @@ src/asm/assembler.c.s:
 	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/assembler.c.s
 .PHONY : src/asm/assembler.c.s
 
+src/asm/crypt_arguments.o: src/asm/crypt_arguments.c.o
+
+.PHONY : src/asm/crypt_arguments.o
+
+# target to build an object file
+src/asm/crypt_arguments.c.o:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/crypt_arguments.c.o
+.PHONY : src/asm/crypt_arguments.c.o
+
+src/asm/crypt_arguments.i: src/asm/crypt_arguments.c.i
+
+.PHONY : src/asm/crypt_arguments.i
+
+# target to preprocess a source file
+src/asm/crypt_arguments.c.i:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/crypt_arguments.c.i
+.PHONY : src/asm/crypt_arguments.c.i
+
+src/asm/crypt_arguments.s: src/asm/crypt_arguments.c.s
+
+.PHONY : src/asm/crypt_arguments.s
+
+# target to generate assembly for a file
+src/asm/crypt_arguments.c.s:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/crypt_arguments.c.s
+.PHONY : src/asm/crypt_arguments.c.s
+
 src/asm/crypt_label.o: src/asm/crypt_label.c.o
 
 .PHONY : src/asm/crypt_label.o
@@ -1526,6 +1553,33 @@ src/asm/crypting.s: src/asm/crypting.c.s
 src/asm/crypting.c.s:
 	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/crypting.c.s
 .PHONY : src/asm/crypting.c.s
+
+src/asm/freeer.o: src/asm/freeer.c.o
+
+.PHONY : src/asm/freeer.o
+
+# target to build an object file
+src/asm/freeer.c.o:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/freeer.c.o
+.PHONY : src/asm/freeer.c.o
+
+src/asm/freeer.i: src/asm/freeer.c.i
+
+.PHONY : src/asm/freeer.i
+
+# target to preprocess a source file
+src/asm/freeer.c.i:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/freeer.c.i
+.PHONY : src/asm/freeer.c.i
+
+src/asm/freeer.s: src/asm/freeer.c.s
+
+.PHONY : src/asm/freeer.s
+
+# target to generate assembly for a file
+src/asm/freeer.c.s:
+	$(MAKE) -f CMakeFiles/Corewar.dir/build.make CMakeFiles/Corewar.dir/src/asm/freeer.c.s
+.PHONY : src/asm/freeer.c.s
 
 src/asm/ft_error_asm.o: src/asm/ft_error_asm.c.o
 
@@ -1950,6 +2004,9 @@ help:
 	@echo "... src/asm/assembler.o"
 	@echo "... src/asm/assembler.i"
 	@echo "... src/asm/assembler.s"
+	@echo "... src/asm/crypt_arguments.o"
+	@echo "... src/asm/crypt_arguments.i"
+	@echo "... src/asm/crypt_arguments.s"
 	@echo "... src/asm/crypt_label.o"
 	@echo "... src/asm/crypt_label.i"
 	@echo "... src/asm/crypt_label.s"
@@ -1962,6 +2019,9 @@ help:
 	@echo "... src/asm/crypting.o"
 	@echo "... src/asm/crypting.i"
 	@echo "... src/asm/crypting.s"
+	@echo "... src/asm/freeer.o"
+	@echo "... src/asm/freeer.i"
+	@echo "... src/asm/freeer.s"
 	@echo "... src/asm/ft_error_asm.o"
 	@echo "... src/asm/ft_error_asm.i"
 	@echo "... src/asm/ft_error_asm.s"

@@ -12,9 +12,9 @@
 
 #include "../includes/libft.h"
 
-char 	*ft_strjoin_asm(char **line, char **str)
+char	*ft_strjoin_asm(char **line, char **str)
 {
-	char 	*res;
+	char	*res;
 
 	if ((res = ft_strjoin(*line, *str)) == NULL)
 		error("Not allocated memory");

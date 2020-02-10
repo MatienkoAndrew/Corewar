@@ -12,80 +12,51 @@
 
 #include "../includes/get_next_line.h"
 
-/*
-** Записываем в переменную line содержимое file
-** file очищаем полностью
-** и выделяем для него память под размер предыдущего file
-** только без строчки line
-*/
-
-int		create_line(int fd, char **ptr, char **line)
+static int	divide_str(char **str, char **row)
 {
-	size_t	len;
-	char	*buffer;
+	char	*new;
+	char	*div;
 
-	len = 0;
-	if (*ptr[fd] == '\0')
-		return (0);
-	while (ptr[fd][len] != '\n' && ptr[fd][len] != '\0')
-		len++;
-	if (!(*line = ft_strsub(ptr[fd], 0, len + 1)))
+	div = ft_strchr_asm(*str, '\n');
+	div++;
+	if (!(*row = ft_strsub(*str, 0, div - *str)))
 		return (-1);
-	if (!(buffer = ft_strdup(ptr[fd] + len + 1)))
-		return (-1);
-	ft_strdel(&ptr[fd]);
-	if (!(ptr[fd] = ft_strdup(buffer)))
-		return (-1);
-	ft_strdel(&buffer);
-	return (1);
-}
-
-int		ft_check_slash(char *buffer, char **ptr, int fd)
-{
-	buffer = ptr[fd];
-	if (!(ptr[fd] = ft_strjoin(buffer, "\n")))
-		return (-1);
-	free(buffer);
-	return (0);
-}
-
-int		readfile(const int fd, char **line, char **ptr, char *buff)
-{
-	char	*buffer;
-	char	*first;
-	int		ret;
-
-	while ((first = ft_strchr(ptr[fd], '\n')) == NULL)
+	if (!ft_strlen(div))
 	{
-		if ((ret = read(fd, buff, BUFF_SIZE)) == 0 && *ptr[fd] != '\0')
-			if (ft_check_slash(buffer, ptr, fd) < 0)
-				return (-1);
-		if (ret == 0)
-			break ;
-		buff[ret] = '\0';
-		buffer = ptr[fd];
-		if (!(ptr[fd] = ft_strjoin(buffer, buff)))
+		free(*str);
+		*str = NULL;
+		return (1);
+	}
+	new = ft_strdup(div);
+	free(*str);
+	*str = new;
+	return ((new) ? 1 : -1);
+}
+
+int			get_next_line(const int fd, char **row)
+{
+	static char		*str = NULL;
+	char			buff[BUFF_SIZE + 1];
+	size_t			size;
+	char			*tmp;
+
+	if (fd < 0 || !row || read(fd, buff, 0) < 0)
+		return (-1);
+	while (!ft_strchr_asm(str, '\n'))
+	{
+		if (!(size = read(fd, buff, BUFF_SIZE)))
+		{
+			if (!(*row = str))
+				return (0);
+			str = NULL;
+			return (1);
+		}
+		buff[size] = '\0';
+		tmp = str;
+		str = ft_strjoin(str, buff);
+		free(tmp);
+		if (!str)
 			return (-1);
-		free(buffer);
-		free(first);
 	}
-	free(buff);
-	return (create_line(fd, ptr, line));
-}
-
-int		get_next_line(const int fd, char **line)
-{
-	static char	*ptr[MAX_FD + 1];
-	char		*buff;
-
-	if ((buff = (char*)malloc(BUFF_SIZE + 1)) == NULL)
-		return (-1);
-	if (fd == -1 || (read(fd, buff, 0) == -1) || fd > MAX_FD)
-	{
-		free(buff);
-		return (-1);
-	}
-	if (ptr[fd] == NULL)
-		ptr[fd] = ft_strnew(1);
-	return (readfile(fd, line, ptr, buff));
+	return (divide_str(&str, row));
 }

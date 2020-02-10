@@ -13,9 +13,9 @@
 #include "asm.h"
 #include "op.h"
 
-t_metka 	*metka_exist(t_metka *metka, char *name)
+t_metka		*metka_exist(t_metka *metka, char *name)
 {
-	t_metka	*temp;
+	t_metka		*temp;
 
 	temp = metka;
 	while (temp)
@@ -27,9 +27,9 @@ t_metka 	*metka_exist(t_metka *metka, char *name)
 	return (NULL);
 }
 
-t_metka     *init_metka(char *name, int byte)
+t_metka		*init_metka(char *name, int byte)
 {
-	t_metka     *metka;
+	t_metka		*metka;
 
 	metka = NULL;
 	if (!(metka = (t_metka *)malloc(sizeof(t_metka))))
@@ -42,9 +42,9 @@ t_metka     *init_metka(char *name, int byte)
 	return (metka);
 }
 
-void        new_metka(t_metka **metka, t_metka *new)
+void		new_metka(t_metka **metka, t_metka *new)
 {
-	t_metka	*point;
+	t_metka		*point;
 
 	if (metka)
 	{
@@ -60,11 +60,11 @@ void        new_metka(t_metka **metka, t_metka *new)
 	}
 }
 
-void        crypt_label(t_asm *assem, t_cont **content)
+void		crypt_label(t_asm *assem, t_cont **content)
 {
-	char 	*name;
-	t_metka *metka;
-	char 	*name_c;
+	char	*name;
+	t_metka	*metka;
+	char	*name_c;
 
 	name_c = (*content)->content;
 	if (!(name = ft_strsub(name_c, 0, ft_strlen(name_c) - 1)))

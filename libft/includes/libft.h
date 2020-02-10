@@ -43,5 +43,6 @@ void				ft_memdel(void **ap);
 char				*ft_strjoin_asm(char **line, char **str);
 void				error(char *str);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
+char				*ft_strchr_asm(const char *s, int c);
 
 #endif

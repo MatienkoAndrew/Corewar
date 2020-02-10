@@ -77,4 +77,6 @@ add_executable(Corewar
         src/asm/link.c
         src/asm/crypt_links.c
         src/asm/new_filename.c
-        src/asm/write_bytecode.c)
+        src/asm/write_bytecode.c
+        src/asm/freeer.c
+        src/asm/crypt_arguments.c)

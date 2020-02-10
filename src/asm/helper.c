@@ -13,24 +13,24 @@
 #include "asm.h"
 #include "op.h"
 
-int 	is_help(char c)
+int		is_help(char c)
 {
 	return (c == ' ' ||
 			c == '\t' ||
 			c == '\r');
 }
 
-int 	is_conditions(char c)
+int		is_conditions(char c)
 {
 	if (c == ' ' || c == '\n' || c == '\0' || c == ',' || c == '\t')
 		return (1);
 	return (0);
 }
 
-int 	is_registr(const char *str)
+int		is_registr(const char *str)
 {
-	int 	i;
-	int 	num;
+	int		i;
+	int		num;
 
 	i = 0;
 	if (ft_strlen(str) >= 2 && ft_strlen(str) <= 3 && str[0] == 'r')
@@ -48,7 +48,7 @@ int 	is_registr(const char *str)
 
 void	new_info(t_asm *assem, char *line)
 {
-	int 	i;
+	int		i;
 
 	i = ++assem->column;
 	while (line[i] && line[i] != '\"')
@@ -66,7 +66,7 @@ void	new_info(t_asm *assem, char *line)
 
 void	new_line(char **line, char *end, int col)
 {
-	char 	*new;
+	char	*new;
 
 	new = NULL;
 	if (ft_strcmp(end - col, *line))

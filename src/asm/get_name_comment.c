@@ -15,16 +15,17 @@
 
 void	get_comment(t_asm *assem, t_cont **content)
 {
-	char 	*comment;
+	char	*comment;
 
 	comment = NULL;
 	*content = (*content)->next;
 	if ((*content)->type == STRING)
 	{
-		if (!(comment = ft_strsub((*content)->content, 1, ft_strlen((*content)->content) - 2)))
+		if (!(comment = ft_strsub((*content)->content,
+				1, ft_strlen((*content)->content) - 2)))
 			error("Not allocated memory");
 		if (ft_strlen(comment) > COMMENT_LENGTH)
-			error("Comment's length is too big\n");
+			error("Comment's length is too long. Max length is \'2048\'\n");
 		assem->comment = ft_strdup(comment);
 		ft_strdel(&comment);
 		*content = (*content)->next;
@@ -37,16 +38,17 @@ void	get_comment(t_asm *assem, t_cont **content)
 
 void	get_name(t_asm *assem, t_cont **content)
 {
-	char 	*name;
+	char	*name;
 
 	name = NULL;
 	*content = (*content)->next;
 	if ((*content)->type == STRING)
 	{
-		if (!(name = ft_strsub((*content)->content, 1, ft_strlen((*content)->content) - 2)))
+		if (!(name = ft_strsub((*content)->content,
+				1, ft_strlen((*content)->content) - 2)))
 			error("Not allocated memory");
 		if (ft_strlen(name) > PROG_NAME_LENGTH)
-			error("Name's length is more than need\n");
+			error("Champion's name is too long. Max length is \'128\'\n");
 		assem->name = ft_strdup(name);
 		ft_strdel(&name);
 		*content = (*content)->next;
@@ -64,9 +66,11 @@ void	get_name_comment(t_asm *assem)
 	content = assem->content;
 	while (assem->name == NULL || assem->comment == NULL)
 	{
-		if (content->type == COMMAND && !assem->name && !ft_strcmp(content->content, NAME_CMD_STRING))
+		if (content->type == COMMAND && !assem->name
+				&& !ft_strcmp(content->content, NAME_CMD_STRING))
 			get_name(assem, &content);
-		else if (content->type == COMMAND && !assem->comment && !ft_strcmp(content->content, COMMENT_CMD_STRING))
+		else if (content->type == COMMAND && !assem->comment
+				&& !ft_strcmp(content->content, COMMENT_CMD_STRING))
 			get_comment(assem, &content);
 		else
 			ft_error_asm(content);

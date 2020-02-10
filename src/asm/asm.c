@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-int 	main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	if (argc == 2 && \
 			!(ft_strcmp(ft_strchr(argv[1], '\0') - 2, ".s")))
