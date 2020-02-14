@@ -11,8 +11,16 @@ ft_printf.h
 ../includes/ft_printf.h
 op.h
 ../includes/op.h
+op_1.h
+../includes/op_1.h
 
 ../includes/op.h
+
+../includes/op_1.h
+op.h
+../includes/op.h
+asm.h
+../includes/asm.h
 
 ../libft/includes/ft_printf.h
 get_next_line.h
@@ -36,15 +44,7 @@ stdlib.h
 unistd.h
 -
 
-/Users/fgeruss/Desktop/Corewar/src/asm/asm.c
-asm.h
-/Users/fgeruss/Desktop/Corewar/src/asm/asm.h
-
-/Users/fgeruss/Desktop/Corewar/src/asm/assembler.c
-asm.h
-/Users/fgeruss/Desktop/Corewar/src/asm/asm.h
-
-/Users/fgeruss/Desktop/Corewar/src/asm/get_name_comment.c
+/Users/fgeruss/Desktop/Corewar/src/asm/crypting.c
 asm.h
 /Users/fgeruss/Desktop/Corewar/src/asm/asm.h
 op.h

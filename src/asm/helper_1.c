@@ -13,6 +13,12 @@
 #include "asm.h"
 #include "op.h"
 
+int				start_condition_1(t_cont *cont, char c)
+{
+	return (cont->type == COMMAND &&
+			(c == '\"' || c == '\''));
+}
+
 int				start_condition(t_cont *cont)
 {
 	return (cont->type == COMMAND &&

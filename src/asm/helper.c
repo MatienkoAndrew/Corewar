@@ -22,7 +22,8 @@ int		is_help(char c)
 
 int		is_conditions(char c)
 {
-	if (c == ' ' || c == '\n' || c == '\0' || c == ',' || c == '\t')
+	if (c == ' ' || c == '\n' || c == '\0' || c == ',' || c == '\t' \
+			|| c == '%' || c == '-')
 		return (1);
 	return (0);
 }
@@ -33,14 +34,16 @@ int		is_registr(const char *str)
 	int		num;
 
 	i = 0;
+	if (str == NULL)
+		return (0);
 	if (ft_strlen(str) >= 2 && ft_strlen(str) <= 3 && str[0] == 'r')
 	{
 		i += 1;
 		while (ft_isdigit(str[i]))
 			i++;
 		num = ft_atoi(str + 1);
-		if (num == 0)
-			error("Register cannot be \'r0\'");
+		if (num < 1)
+			error("Invalid register");
 		return (str[i] == '\0' && num > 0);
 	}
 	return (0);
@@ -71,7 +74,7 @@ void	new_line(char **line, char *end, int col)
 	new = NULL;
 	if (ft_strcmp(end - col, *line))
 	{
-		if (!(new = ft_strdup(end)))
+		if (!(new = ft_strdup(end - col)))
 			error("Not allocated memory");
 		ft_strdel(line);
 		*line = new;

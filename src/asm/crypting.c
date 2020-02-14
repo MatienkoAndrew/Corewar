@@ -44,6 +44,8 @@ void	renew_byte_code_buffer(t_asm *assem)
 
 int		skip(t_cont *content)
 {
+	if (content->type == SEPARATOR && content->next->type == NEW_LINE)
+		return (0);
 	return (content->type == NEW_LINE || \
 			content->type == COMMAND || \
 			content->type == SEPARATOR || \

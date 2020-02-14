@@ -181,6 +181,7 @@ CMakeFiles/Corewar.dir/libft/src/printing.c.o
 CMakeFiles/Corewar.dir/src/asm/asm.c.o
  ../includes/asm.h
  ../includes/op.h
+ ../includes/op_1.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
@@ -188,13 +189,23 @@ CMakeFiles/Corewar.dir/src/asm/asm.c.o
 CMakeFiles/Corewar.dir/src/asm/assembler.c.o
  ../includes/asm.h
  ../includes/op.h
+ ../includes/op_1.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
  /Users/fgeruss/Desktop/Corewar/src/asm/assembler.c
+CMakeFiles/Corewar.dir/src/asm/crypt_arguments.c.o
+ ../includes/asm.h
+ ../includes/op.h
+ ../includes/op_1.h
+ ../libft/includes/ft_printf.h
+ ../libft/includes/get_next_line.h
+ ../libft/includes/libft.h
+ /Users/fgeruss/Desktop/Corewar/src/asm/crypt_arguments.c
 CMakeFiles/Corewar.dir/src/asm/crypt_label.c.o
  ../includes/asm.h
  ../includes/op.h
+ ../includes/op_1.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
@@ -202,6 +213,7 @@ CMakeFiles/Corewar.dir/src/asm/crypt_label.c.o
 CMakeFiles/Corewar.dir/src/asm/crypt_links.c.o
  ../includes/asm.h
  ../includes/op.h
+ ../includes/op_1.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
@@ -209,6 +221,7 @@ CMakeFiles/Corewar.dir/src/asm/crypt_links.c.o
 CMakeFiles/Corewar.dir/src/asm/crypt_operator.c.o
  ../includes/asm.h
  ../includes/op.h
+ ../includes/op_1.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
@@ -216,13 +229,23 @@ CMakeFiles/Corewar.dir/src/asm/crypt_operator.c.o
 CMakeFiles/Corewar.dir/src/asm/crypting.c.o
  ../includes/asm.h
  ../includes/op.h
+ ../includes/op_1.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
  /Users/fgeruss/Desktop/Corewar/src/asm/crypting.c
+CMakeFiles/Corewar.dir/src/asm/freeer.c.o
+ ../includes/asm.h
+ ../includes/op.h
+ ../includes/op_1.h
+ ../libft/includes/ft_printf.h
+ ../libft/includes/get_next_line.h
+ ../libft/includes/libft.h
+ /Users/fgeruss/Desktop/Corewar/src/asm/freeer.c
 CMakeFiles/Corewar.dir/src/asm/ft_error_asm.c.o
  ../includes/asm.h
  ../includes/op.h
+ ../includes/op_1.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
@@ -230,6 +253,7 @@ CMakeFiles/Corewar.dir/src/asm/ft_error_asm.c.o
 CMakeFiles/Corewar.dir/src/asm/get_name_comment.c.o
  ../includes/asm.h
  ../includes/op.h
+ ../includes/op_1.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
@@ -237,6 +261,7 @@ CMakeFiles/Corewar.dir/src/asm/get_name_comment.c.o
 CMakeFiles/Corewar.dir/src/asm/helper.c.o
  ../includes/asm.h
  ../includes/op.h
+ ../includes/op_1.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
@@ -244,6 +269,7 @@ CMakeFiles/Corewar.dir/src/asm/helper.c.o
 CMakeFiles/Corewar.dir/src/asm/helper_1.c.o
  ../includes/asm.h
  ../includes/op.h
+ ../includes/op_1.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
@@ -251,6 +277,7 @@ CMakeFiles/Corewar.dir/src/asm/helper_1.c.o
 CMakeFiles/Corewar.dir/src/asm/initialization.c.o
  ../includes/asm.h
  ../includes/op.h
+ ../includes/op_1.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
@@ -258,6 +285,7 @@ CMakeFiles/Corewar.dir/src/asm/initialization.c.o
 CMakeFiles/Corewar.dir/src/asm/link.c.o
  ../includes/asm.h
  ../includes/op.h
+ ../includes/op_1.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
@@ -265,6 +293,7 @@ CMakeFiles/Corewar.dir/src/asm/link.c.o
 CMakeFiles/Corewar.dir/src/asm/new_filename.c.o
  ../includes/asm.h
  ../includes/op.h
+ ../includes/op_1.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
@@ -272,6 +301,7 @@ CMakeFiles/Corewar.dir/src/asm/new_filename.c.o
 CMakeFiles/Corewar.dir/src/asm/parsing.c.o
  ../includes/asm.h
  ../includes/op.h
+ ../includes/op_1.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
@@ -279,6 +309,7 @@ CMakeFiles/Corewar.dir/src/asm/parsing.c.o
 CMakeFiles/Corewar.dir/src/asm/validation.c.o
  ../includes/asm.h
  ../includes/op.h
+ ../includes/op_1.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h
@@ -286,6 +317,7 @@ CMakeFiles/Corewar.dir/src/asm/validation.c.o
 CMakeFiles/Corewar.dir/src/asm/write_bytecode.c.o
  ../includes/asm.h
  ../includes/op.h
+ ../includes/op_1.h
  ../libft/includes/ft_printf.h
  ../libft/includes/get_next_line.h
  ../libft/includes/libft.h

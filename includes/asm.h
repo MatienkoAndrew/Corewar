@@ -132,5 +132,6 @@ void				crypt_direct(t_asm *assem, t_cont *content, int size_arg);
 signed char			renew_buffer(signed char b_code_args,
 								int count_arg, signed char type);
 signed char			get_type_arg(signed char type);
+int					start_condition_1(t_cont *cont, char c);
 
 #endif

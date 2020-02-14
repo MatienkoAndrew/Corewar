@@ -28,7 +28,8 @@ void	parser_symb(t_asm *assem, char *line, int col, t_cont *cont)
 		cont->type = LABEL;
 		add_content(&assem, cont);
 	}
-	else if (assem->column - i > 0 && is_conditions(line[assem->column]))
+	else if (assem->column - i > 0 && (is_conditions(line[assem->column]) \
+		|| start_condition_1(cont, line[assem->column])))
 	{
 		cont->content = ft_strsub(line, col, assem->column - col);
 		if (start_condition(cont))

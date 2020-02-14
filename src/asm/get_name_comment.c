@@ -25,7 +25,7 @@ void	get_comment(t_asm *assem, t_cont **content)
 				1, ft_strlen((*content)->content) - 2)))
 			error("Not allocated memory");
 		if (ft_strlen(comment) > COMMENT_LENGTH)
-			error("Comment's length is too long. Max length is \'2048\'\n");
+			error("Champion comment too long (Max length 2048)");
 		assem->comment = ft_strdup(comment);
 		ft_strdel(&comment);
 		*content = (*content)->next;
@@ -76,4 +76,6 @@ void	get_name_comment(t_asm *assem)
 			ft_error_asm(content);
 		content = content->next;
 	}
+	if (content->type == END)
+		ft_error_asm(content);
 }
