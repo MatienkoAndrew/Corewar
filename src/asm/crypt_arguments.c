@@ -93,6 +93,8 @@ signed char		crypt_arguments(t_asm *assem, t_cont **content, t_op *op)
 			b_code_args = renew_buffer(b_code_args, count, type);
 			*content = (*content)->next;
 		}
+		else
+		    operator_error(*content);
 		if (count < op->args_num - 1)
 		{
 			if ((*content)->type != SEPARATOR)

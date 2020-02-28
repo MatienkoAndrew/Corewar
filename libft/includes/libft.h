@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+void				*ft_memalloc(size_t size);
 void				ft_strdel(char **as);
 char				*ft_strnew(size_t size);
 char				*ft_strstr(const char *s1, const char *s2);

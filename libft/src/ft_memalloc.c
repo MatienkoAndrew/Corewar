@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   asm.c                                              :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgeruss <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: nenergy <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/21 19:50:23 by fgeruss           #+#    #+#             */
-/*   Updated: 2020/01/21 19:50:26 by fgeruss          ###   ########.fr       */
+/*   Created: 2019/04/12 19:40:56 by nenergy           #+#    #+#             */
+/*   Updated: 2019/04/12 19:58:24 by nenergy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "asm.h"
+#include "libft.h"
 
-int		main(int argc, char **argv)
+void	*ft_memalloc(size_t size)
 {
-	if (argc == 2 && \
-			!(ft_strcmp(ft_strchr(argv[1], '\0') - 2, ".s")))
-		assembler(argv[1]);
-	else
-		ft_printf("Usage: ./asm <file.s>\n");
-	return (0);
+	void	*fresh;
+
+	if (!(fresh = malloc(sizeof(*fresh) * (int)size)))
+		return (NULL);
+	ft_bzero(fresh, size);
+	return (fresh);
 }

@@ -76,6 +76,6 @@ void	get_name_comment(t_asm *assem)
 			ft_error_asm(content);
 		content = content->next;
 	}
-	if (content->type == END)
+	if (content->type == END || content->type == COMMAND)
 		ft_error_asm(content);
 }

@@ -6,7 +6,7 @@
 #    By: fgeruss <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/11 16:09:18 by fgeruss           #+#    #+#              #
-#    Updated: 2020/01/21 19:17:25 by fgeruss          ###   ########.fr        #
+#    Updated: 2020/02/27 19:12:30 by asusan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ C_FILE = ft_atoi.c \
 		 ft_putstr.c \
 		 ft_strcmp.c \
 		 ft_isdigit.c \
+		 ft_memalloc.c \
 		 get_next_line.c \
 		 ft_printf.c \
 		 attribute.c \
@@ -65,11 +66,9 @@ C_FILE = ft_atoi.c \
 		 ft_isalpha.c ft_putendl_fd.c ft_strchr_asm.c ft_memdel.c ft_strjoin_asm.c ft_error.c ft_memcpy.c
 
 SRC = $(addprefix $(SRC_DIRECTORY, $(C_FILE))
-
 OBJECTS_DIRECTORY = objects/
 OBJECTS_LIST = $(patsubst %.c, %.o, $(C_FILE))
 OBJECTS = $(addprefix $(OBJECTS_DIRECTORY), $(OBJECTS_LIST))
-
  #=====COLOUR========
  RED = \033[1;31m
  GREEN = \033[0;32m
@@ -77,9 +76,6 @@ OBJECTS = $(addprefix $(OBJECTS_DIRECTORY), $(OBJECTS_LIST))
  YELLOW = \033[0;33m
  RESET = \033[0m
  #===================
-
-.PHONY: all clean fclean re
-
 all: $(NAME)
 
 $(NAME): $(OBJECTS_DIRECTORY) $(OBJECTS)
@@ -93,12 +89,11 @@ $(OBJECTS_DIRECTORY):
 	@echo "$(YELLOW)(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧ Compiling library... Wait a sec."
 
 $(OBJECTS_DIRECTORY)%.o: $(SRC_DIRECTORY)%.c $(HEADERS)
-	@$(CC) $(FLAGS) $(INCLUDES) $< -o $@
+	@gcc $(FLAGS) -o $@ -c $< $(INCLUDES)
 	@echo "$(GREEN).$(RESET)\c"
 
 clean:
 	@rm -rf $(OBJECTS_DIRECTORY)
-	@echo "$(RED)$(NAME): $(OBJECTS_DIRECTORY) was deleted$(RESET)"
 	@echo "$(RED)$(NAME): object files were deleted$(RESET)"
 
 fclean: clean
@@ -106,4 +101,3 @@ fclean: clean
 	@echo "$(RED)$(NAME): $(NAME) was deleted$(RESET)"
 
 re: fclean all
-

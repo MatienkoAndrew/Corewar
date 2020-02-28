@@ -50,9 +50,13 @@ void	parser_string(t_asm *assem, char **line, int col, t_cont *cont)
 
 	assem->column = col;
 	size = 1;
-	while ((end = ft_strchr(&((*line)[col + 1]), '\"')) == NULL)
-		if ((size = get_next_line(assem->fd, &str)) > 0)
-			*line = ft_strjoin_asm(line, &str);
+	while (!(end = ft_strchr(&((*line)[col + 1]), '\"')))
+	{
+        if ((size = get_next_line(assem->fd, &str)) > 0)
+            *line = ft_strjoin_asm(line, &str);
+        else
+            lexical_error(assem);
+    }
 	new_info(assem, *line);
 	if (size == -1)
 		error("Bad file");

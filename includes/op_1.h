@@ -13,9 +13,6 @@
 #ifndef OP_1_H
 # define OP_1_H
 
-# include "op.h"
-# include "asm.h"
-
 static char		*g_types[] = {
 	"COMMAND",
 	"STRING",

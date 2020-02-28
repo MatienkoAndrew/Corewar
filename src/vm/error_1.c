@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   asm.c                                              :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgeruss <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: asusan <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/21 19:50:23 by fgeruss           #+#    #+#             */
-/*   Updated: 2020/01/21 19:50:26 by fgeruss          ###   ########.fr       */
+/*   Created: 2020/01/22 22:53:30 by asusan            #+#    #+#             */
+/*   Updated: 2020/01/22 22:53:31 by asusan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "asm.h"
+#include "../includes/corewar.h"
 
-int		main(int argc, char **argv)
+void	error_1(char *message, t_vm *vm)
 {
-	if (argc == 2 && \
-			!(ft_strcmp(ft_strchr(argv[1], '\0') - 2, ".s")))
-		assembler(argv[1]);
-	else
-		ft_printf("Usage: ./asm <file.s>\n");
-	return (0);
+	free_all(vm);
+	write(2, message, ft_strlen(message));
+	write(2, "\n", 1);
+	exit(0);
 }
